@@ -1,6 +1,6 @@
 ## Demo
 
-You can view a live demo [here](https://rest-countries-api-dilan.pages.dev/)
+You can view a live demo [here](https://bento-grid.pages.dev/)
 
 ## Installation
 
