@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  --bg-body: rgb(245, 245, 245);
+
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+
+  --ff-html: "DM Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  font-weight: 500;
+}
+
+html {
+  line-height: 1.18;
+  font-size: 18px;
+  font-family: var(--ff-html);
+}
+
+body {
+  background-color: var(--bg-body);
+  padding: 4em 0em;
+  letter-spacing: -2px;
+}
+
+/* Contents */
+.bento-grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 50px;
+  gap: 1.4rem;
+  grid-template-areas: 
+  'box1 box2 box2 box3'
+  'box1 box2 box2 box3'
+  'box1 box2 box2 box3'
+  'box1 box2 box2 box3'
+  'box1 box5 box6 box3'
+  'box4 box5 box6 box3'
+  'box4 box5 box6 box3'
+  'box4 box7 box8 box8'
+  'box4 box7 box8 box8'
+  'box4 box7 box8 box8';
+}
+
+.bento-grid > div {
+  border-radius: 10px;
+  padding: 1.4rem;
+  overflow: hidden;
+}
+
+.bento-grid > div:nth-child(1) {
+  background-color: var(--yellow-100); 
+}
+
+.bento-grid > div:nth-child(2),
+.bento-grid > div:nth-child(8) {
+  background-color: var(--purple-500);
+  color: var(--white)
+}
+
+.bento-grid > div:nth-child(3) {
+  background-color: var(--purple-100);
+}
+
+.bento-grid > div:nth-child(4),
+.bento-grid > div:nth-child(6) {
+  background-color: var(--yellow-500);
+}  
+
+.bento-grid > div:nth-child(5),
+.bento-grid > div:nth-child(7) {
+  background-color: var(--white);
+}
+
+/* Create and schedule content */
+.bento-grid > div:nth-child(1) {
+  grid-area: box1;
+  font-size: 1.35em;
+
+  display: grid;
+  place-content: center;
+  place-items: center;
+
+  span {
+    color: var(--purple-500);
+    font-style: italic;
+  }
+
+  img {
+    margin-top: 1em;
+    width: 164px;
+  }
+}
+
+/* Social media faster */
+.bento-grid > div:nth-child(2) {
+  grid-area: box2;
+  letter-spacing: .5px;
+  padding-inline: 2em;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+  
+  h1 {
+    font-size: 2.8em;
+    margin-bottom: .5em;
+  }
+
+  h1 span:nth-child(1) {
+    color: var(--yellow-500)
+  }
+
+  h1 span:nth-child(2) {
+    font-style: italic;
+  }
+
+  img {
+    width: 160px;
+    margin-bottom: .4em;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: .8em;
+  }
+}
+
+/* Schedule to social media */
+.bento-grid > div:nth-child(3) {
+  grid-area: box3;
+
+  h1 {
+    margin-bottom: .8em;
+  }
+
+  img {
+    width: auto;
+    height: 268px;
+    margin-bottom: .8em;
+  }
+
+  p {
+    letter-spacing: .5px;
+    font-size: .81em;
+    font-weight: 500;
+  }
+}
+
+/* Write your content using AI */
+.bento-grid > div:nth-child(4) {
+  grid-area: box4;
+  font-size: 1.25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.1rem;
+  
+  img {
+    width: 180px;
+    height: auto;
+  }
+}
+
+/* Manage multiple accounts */
+.bento-grid > div:nth-child(5) {
+  grid-area: box5;
+  padding: 1.18rem;
+
+  h1 {
+    line-height: .87;
+  }
+
+  img {
+    margin-bottom: .25rem;
+    filter: drop-shadow(-3px 3px 5px rgb(0, 0, 0, .01));
+    width: 269px;
+    height: auto;
+  }
+}
+
+/* Maintain consistent posting */
+.bento-grid > div:nth-child(6) {
+  grid-area: box6;
+  padding: 1rem;
+
+  h1 {
+    margin-bottom: .4em;
+    line-height: .86;
+  }
+
+  img {
+    height: auto;
+    width: 182px;
+  }
+}
+
+/* >56% */
+.bento-grid > div:nth-child(7) {
+  grid-area: box7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+
+  h1 {
+    font-size: 2.8em;
+    margin-bottom: .2em
+  }
+
+  p {
+    letter-spacing: .2px;
+    font-size: .8em;
+    font-weight: 500;
+  }
+  
+  img {
+    height: auto;
+    width: 155px;
+  }
+}
+
+/* Grow followers */
+.bento-grid > div:nth-child(8) {
+  grid-area: box8;
+  display: flex;
+  gap: .8rem;
+  padding: 1rem;
+  align-items: center;
+
+  h1 {
+    letter-spacing: .4px;
+    font-size: 1.7em;
+  }
+
+  img {
+    height: 165px;
+    width: auto;
+  }
+}
+
+@media (width <= 1024px) {
+  .bento-grid {
+    grid-auto-rows: initial;
+    grid-template-areas:
+      'box1 box1 box2 box2'
+      'box1 box1 box2 box2'
+      'box3 box3 box4 box4'
+      'box3 box3 box4 box4'
+      'box5 box5 box6 box6'
+      'box5 box5 box6 box6'
+      'box7 box7 box8 box8'
+      'box7 box7 box8 box8';
+  }
+
+  .bento-grid > div:nth-child(8) {
+    flex-direction: column;
+  }
+
+  .bento-grid > div:nth-child(4) {
+    justify-content: start;
+    gap: 1em;
+
+    img {
+      width: 256px;
+    }
+  }
+}
+
+@media (width <= 768px) {
+  body {
+    padding: 1.5rem 0rem;
+  }
+
+  .bento-grid > div {
+    text-align: center;
+  }
+
+  .bento-grid {
+    grid-template-areas:
+      'box2'
+      'box5'
+      'box6'
+      'box3'
+      'box8'
+      'box7'
+      'box1'
+      'box4';
+  }
+
+  .bento-grid > div:nth-child(4),
+  .bento-grid > div:nth-child(5),
+  .bento-grid > div:nth-child(6),
+  .bento-grid > div:nth-child(7) {
+    text-align: left;
+  }
+}
+
+/* Utility classes */
+.container {
+  --width: 950px;
+  --padding: 1rem;
+
+  width: min(var(--width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
