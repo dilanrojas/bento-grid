@@ -105,7 +105,7 @@ body {
 
   img {
     margin-top: 1em;
-    width: 164px;
+    width: 194px;
   }
 }
 
@@ -133,13 +133,13 @@ body {
   }
 
   img {
-    width: 160px;
+    width: 180px;
     margin-bottom: .4em;
   }
 
   p {
     font-weight: 400;
-    font-size: .8em;
+    font-size: .84em;
   }
 }
 
@@ -173,6 +173,10 @@ body {
   justify-content: space-between;
   padding: 1.1rem;
   
+  h1 {
+    max-width: 6ch;
+  }
+
   img {
     width: 220px;
     height: auto;
@@ -191,7 +195,7 @@ body {
   img {
     margin-bottom: .25rem;
     filter: drop-shadow(-3px 3px 5px rgb(0, 0, 0, .01));
-    width: 269px;
+    width: 320px;
     height: auto;
   }
 }
@@ -252,7 +256,7 @@ body {
   }
 
   img {
-    height: 165px;
+    height: 185px;
     width: auto;
   }
 }
@@ -269,6 +273,10 @@ body {
       'box5 box5 box6 box6'
       'box7 box7 box8 box8'
       'box7 box7 box8 box8';
+
+    h1 {
+      max-width: 100%!important;
+    }
   }
 
   .bento-grid > div:nth-child(8) {
